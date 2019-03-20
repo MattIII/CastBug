@@ -5,20 +5,20 @@ defmodule CastBug.Repo.Migrations.CreateChannels do
     create table(:channels) do
       add :link, :string
       add :copyright, :string
-      add :webMasterEmail, :string
-      add :webMasterName, :string
-      add :managingEditorEmail, :string
-      add :managingEditorName, :string
-      add :imageUrl, :string
-      add :imageTitle, :string
-      add :imageLink, :string
-      add :ownerName, :string
-      add :ownerEmail, :string
+      add :webmaster_name, :string
+      add :webmaster_email, :string
+      add :managing_editor_name, :string
+      add :managing_editor_email, :string
+      add :image_url, :string
+      add :image_title, :string
+      add :image_link, :string
+      add :owner_name, :string
+      add :owner_email, :string
       add :categories, {:array, :string}
       add :keywords, :text
       add :explicit, :boolean, default: false, null: false
-      add :xmlLink, :string
-      add :pubDate, :date
+      add :xml_link, :string
+      add :pub_date, :naive_datetime
       add :title, :string
       add :author, :string
       add :description, :text

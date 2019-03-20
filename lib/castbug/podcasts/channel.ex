@@ -8,22 +8,22 @@ defmodule CastBug.Podcasts.Channel do
     field :copyright, :string
     field :description, :string
     field :explicit, :boolean, default: false
-    field :imageLink, :string
-    field :imageTitle, :string
-    field :imageUrl, :string
+    field :image_link, :string
+    field :image_title, :string
+    field :image_url, :string
     field :keywords, :string
     field :link, :string
-    field :managingEditorEmail, :string
-    field :managingEditorName, :string
-    field :ownerEmail, :string
-    field :ownerName, :string
-    field :pubDate, :date
+    field :managing_editor_name, :string
+    field :managing_editor_email, :string
+    field :owner_name, :string
+    field :owner_email, :string
+    field :pub_date, :naive_datetime
     field :subtitle, :string
     field :summary, :string
     field :title, :string
-    field :webMasterEmail, :string
-    field :webMasterName, :string
-    field :xmlLink, :string
+    field :webmaster_name, :string
+    field :webmaster_email, :string
+    field :xml_link, :string
 
     timestamps()
   end
@@ -31,7 +31,7 @@ defmodule CastBug.Podcasts.Channel do
   @doc false
   def changeset(channel, attrs) do
     channel
-    |> cast(attrs, [:link, :copyright, :webMasterEmail, :webMasterName, :managingEditorEmail, :managingEditorName, :imageUrl, :imageTitle, :imageLink, :ownerName, :ownerEmail, :categories, :keywords, :explicit, :xmlLink, :pubDate, :title, :author, :description, :summary, :subtitle])
-    |> validate_required([:link, :copyright, :webMasterEmail, :webMasterName, :managingEditorEmail, :managingEditorName, :imageUrl, :imageTitle, :imageLink, :ownerName, :ownerEmail, :categories, :keywords, :explicit, :xmlLink, :pubDate, :title, :author, :description, :summary, :subtitle])
+    |> cast(attrs, [:link, :copyright, :webmaster_name, :webmaster_email, :managing_editor_name, :managing_editor_email, :image_url, :image_title, :image_link, :owner_name, :owner_email, :categories, :keywords, :explicit, :xml_link, :pub_date, :title, :author, :description, :summary, :subtitle])
+    |> validate_required([:xml_link, :title])
   end
 end
