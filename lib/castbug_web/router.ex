@@ -21,7 +21,7 @@ defmodule CastBugWeb.Router do
 
   scope "/" do
     forward "/graph", Absinthe.Plug, schema: CastBugWeb.Schema, interface: :simple, context: %{pubsub: CastBugWeb.Endpoint}
-    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: CastBugWeb.Schema, interface: :simple, context: %{pubsub: CastBugWeb.Endpoint}
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: CastBugWeb.Schema, interface: :playground, context: %{pubsub: CastBugWeb.Endpoint}
   end
 
   # Other scopes may use custom stacks.
