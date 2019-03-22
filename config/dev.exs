@@ -9,7 +9,7 @@ use Mix.Config
 config :castbug, CastBugWeb.Endpoint,
   http: [port: 8349],
   debug_errors: true,
-  code_reloader: true,
+  code_reloader: false,
   check_origin: false,
   watchers: [
     node: [
