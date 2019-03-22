@@ -1,0 +1,21 @@
+{
+  "short_name": "CastBug",
+  "name": "CastBug",
+  "icons": [
+    {
+      "src": "/favicons/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicons/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#339922"
+}
